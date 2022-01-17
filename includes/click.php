@@ -9,27 +9,43 @@
 	</div>
 
 	<script>
-		$('#btn1').click(function() {
+
+		function carrega1() {
 			$('#p2').load('includes/new_load2.php', function(responseTxt, statusTxt, xhr) {
 				if (statusTxt == 'success') {
-					alert('External content loaded successfully');
+					// alert('External content loaded successfully');
 				}
 				if (statusTxt == 'error') {
 					alert('Error: ' + xhr.status + ": " + xhr.statusTxt);
 				}
-			});
+			});			
+		}
+
+		function carrega2() {
+			$('#p2').load('includes/new_load3.php', function(responseTxt, statusTxt, xhr) {
+				if (statusTxt == 'success') {
+					// alert('External content loaded successfully');
+				}
+				if (statusTxt == 'error') {
+					alert('Error: ' + xhr.status + ": " + xhr.statusTxt);
+				}
+			});			
+		}
+
+		$('#btn1').click(function() {
+			carrega1();
 		});
 
 		$('#btn2').click(function() {
-			$('#p2').load('includes/new_load3.php', function(responseTxt, statusTxt, xhr) {
-				if (statusTxt == 'success') {
-					alert('External content loaded successfully');
-				}
-				if (statusTxt == 'error') {
-					alert('Error: ' + xhr.status + ": " + xhr.statusTxt);
-				}
-			});
+			carrega2();
 		});
+
+		const element = document.getElementById('body');
+
+		setInterval(function () {
+			carrega1();
+		}, 300);		
+
 	</script>
 
 </div>
