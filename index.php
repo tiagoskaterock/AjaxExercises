@@ -15,17 +15,20 @@
 <nav class="jumbotron text-center">
 	<ul class="list-unstyled">
 		<li><a href="#load">load()</a></li>
+    <li><a href="#click">click()</a></li>
+    <li><a href="#get">get()</a></li>
 	</ul>
 </nav>
   
-<div class="container bg-light">
+<div class="container bg-light p-5">
   <h1>Ajax Exercises</h1>
+
 
   <?php   
     include 'includes/load.php';    	  
     include 'includes/click.php';    	  
+    include 'includes/get.php';       
   ?>
-
 
 
 </div>
